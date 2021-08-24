@@ -23,5 +23,11 @@ public class Aula1_Exemplo2 {
         //Exibindo a operação de divisão
         System.out.println(resultadoDeDivisao);
 
+        //Criando operacao de multiplicacao
+        int resultadoDeMultiplicacao= numero1 * numero2;
+
+        //Exibindo a operacao de multiplicacao
+        System.out.print(resultadoDeMultiplicacao);
+
     }
 }
