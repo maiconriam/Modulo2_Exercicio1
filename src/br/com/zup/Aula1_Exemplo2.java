@@ -4,7 +4,7 @@ public class Aula1_Exemplo2 {
     public static void main(String[] args) {
 
         int numero1 = 50;
-        int numero2 = 60;
+        int numero2 = 50;
 
         //Criando operacao de soma
         int resultadoDaSoma = numero1 + numero2;
@@ -15,6 +15,13 @@ public class Aula1_Exemplo2 {
         int resultadoDaSubtracao= numero1 - numero2;
 
         //Exibindo a operação de subtracao
-        System.out.print(resultadoDaSubtracao);
+        System.out.println(resultadoDaSubtracao);
+
+        //Criando operacao de divisao
+        int resultadoDeDivisao = numero1 / numero2;
+
+        //Exibindo a operação de divisão
+        System.out.println(resultadoDeDivisao);
+
     }
 }
