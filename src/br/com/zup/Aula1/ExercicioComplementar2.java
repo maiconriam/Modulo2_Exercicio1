@@ -1,8 +1,8 @@
-package br.com.zup;
+package br.com.zup.Aula1;
 
 public class ExercicioComplementar2 {
     public static void main(String[] args) {
-        double tamanhodaarea = 550;
+        double tamanhodaarea = 600;
         double litros = tamanhodaarea / 6;
         double lata = litros / 18;
         double galoes = litros /3.6;
