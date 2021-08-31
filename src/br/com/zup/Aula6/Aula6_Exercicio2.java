@@ -7,15 +7,15 @@ public class Aula6_Exercicio2 {
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("Por favor digite quantos números você quer ler");
-        double numeroDigitados = leitor.nextDouble();
+        int numeroDigitados = leitor.nextInt();
 
-        double soma = 0;
-        double media = 0;
+        int soma = 0;
+        int media = 0;
 
         int contador =1;
         while(contador <= numeroDigitados){
             System.out.println("Digite o numero " +contador + " :");
-            double numeroDigitadoPeloUsuario = leitor.nextDouble();
+            int numeroDigitadoPeloUsuario = leitor.nextInt();
 
             soma = soma + numeroDigitadoPeloUsuario;
             contador ++;
