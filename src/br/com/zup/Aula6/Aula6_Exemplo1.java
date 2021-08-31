@@ -11,6 +11,14 @@ public class Aula6_Exemplo1 {
         alunos.add("Maicon");
         alunos.add("André");
         alunos.add("Yan");
-        System.out.println(alunos.get(0));
+        alunos.add("Marcío");
+
+        for (String referencia : alunos){
+            if (referencia.contains("Maicon")){
+                System.out.println("Aluno cadastrado");
+            }else{
+                System.out.println("Aluno não cadastrado no sistema");
+            }
+        }
     }
 }
