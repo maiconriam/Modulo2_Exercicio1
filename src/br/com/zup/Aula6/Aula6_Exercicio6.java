@@ -22,7 +22,7 @@ public class Aula6_Exercicio6 {
 
                 primeiroIntervalo ++;
             }
-            System.out.println(soma);
+            System.out.println("A soma dos números impares no intervalo é " +soma);
         } else {
             System.out.println("Intervalo de valores inválido");
         }
