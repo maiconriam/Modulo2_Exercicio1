@@ -14,7 +14,8 @@ public class Aula7_LevelUp {
 
         while (chave == true) {
             System.out.println("Digite 1: Para cadastrar um aluno");
-            System.out.println("Digite 2: Para sair do programa");
+            System.out.println("Digite 2: Para exibir a lista");
+            System.out.println("Digite 3: Para sair do programa");
             opcao = leitor.nextInt();
             leitor.nextLine();
             if (opcao == 1) {
@@ -28,14 +29,21 @@ public class Aula7_LevelUp {
                 alunos.put(email, "Nome: " + nome + " Telefone: " + telefone);
 
             } else if (opcao == 2) {
-                chave = false;
+                for (String chaveAluno : alunos.keySet()){
+                    System.out.println("Contato: " + alunos.get(chaveAluno) + " Email: " +chaveAluno);
+                }
 
+            } else if (opcao == 3) {
+                chave = false;
             } else {
                 System.out.println("Por favor, digite um valor valido.");
             }
         }
     }
+
 }
+
+
 
 //        Entrega minima
 //        System.out.println("Digite o nome completo do aluno: ");
