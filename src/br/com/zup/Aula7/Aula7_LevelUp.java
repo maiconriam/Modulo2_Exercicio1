@@ -15,7 +15,8 @@ public class Aula7_LevelUp {
         while (chave == true) {
             System.out.println("Digite 1: Para cadastrar um aluno");
             System.out.println("Digite 2: Para exibir a lista");
-            System.out.println("Digite 3: Para sair do programa");
+            System.out.println("Digite 3: Para remover um aluno da lista usando o email");
+            System.out.println("Digite 4: Para sair do programa");
             opcao = leitor.nextInt();
             leitor.nextLine();
             if (opcao == 1) {
@@ -28,21 +29,36 @@ public class Aula7_LevelUp {
 
                 alunos.put(email, "Nome: " + nome + " Telefone: " + telefone);
 
-            } else if (opcao == 2) {
-                for (String chaveAluno : alunos.keySet()){
-                    System.out.println("Contato: " + alunos.get(chaveAluno) + " Email: " +chaveAluno);
+            }
+            else if (opcao == 2) {
+                for (String chaveAluno : alunos.keySet()) {
+                    System.out.println("Contato: " + alunos.get(chaveAluno) + " Email: " + chaveAluno);
                 }
 
-            } else if (opcao == 3) {
+            }
+            else if (opcao == 3) {
+                System.out.println("Por favor, digite o email a ser deletado: ");
+                String emailDeletado = "";
+                String emailASerDeletado = leitor.nextLine();
+                for (String emailAluno : alunos.keySet()){
+                    if(emailAluno.equals(emailASerDeletado)){
+                        System.out.println("Email a ser deletado com sucesso.");
+                        emailDeletado = emailASerDeletado;
+
+                    }
+                }
+                alunos.remove(emailDeletado);
+            }
+            else if (opcao == 4) {
                 chave = false;
-            } else {
+            }
+            else {
                 System.out.println("Por favor, digite um valor valido.");
             }
         }
     }
 
 }
-
 
 
 //        Entrega minima
