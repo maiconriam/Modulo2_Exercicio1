@@ -9,18 +9,16 @@ public class Aula7_Exemplo1 {
     public static void main(String[] args) {
         List<String> alunos = new ArrayList<>();
 
-        alunos.add("Maicon");
-        alunos.add("André");
 
-        for (String lista : alunos){
-            System.out.println(lista);
-        }
+        alunos.add("Maicon");
+        alunos.add("Ju");
+
         Map<String, String> contatos = new HashMap<String, String>();
 
-        contatos.put("0458978778", "André");
-        contatos.put("1029013289", "André");
+        contatos.put("0458978778", alunos.get(0));
+        contatos.put("1029013289", alunos.get(1));
 
-        for (String referencia : contatos.keySet()){
+        for (String referencia : contatos.values()){
             System.out.println(referencia);
     }
 }
