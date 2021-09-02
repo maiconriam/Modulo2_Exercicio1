@@ -27,32 +27,44 @@ public class Aula7_LevelUp {
                 System.out.println("Digite o email do usuario: ");
                 String email = leitor.nextLine();
 
-                alunos.put(email, "Nome: " + nome + " Telefone: " + telefone);
+                if (alunos.size() != 0){
+                    for (String verificarChave : alunos.keySet()){
+                        if (verificarChave.equals(email)){
+                            System.out.println("Email ja cadastrado.");
+                        }
+                        else{
+                            alunos.put(email, "Nome: " + nome + " Telefone: " + telefone);
+                            System.out.println("Usuario cadastrado com sucesso.");
+                        }
+                    }
+                }else{
+                    alunos.put(email, "Nome: " + nome + " Telefone: " + telefone);
+                    System.out.println("Usuario cadastrado com sucesso.");
+                }
 
-            }
-            else if (opcao == 2) {
+
+
+            } else if (opcao == 2) {
                 for (String chaveAluno : alunos.keySet()) {
                     System.out.println("Contato: " + alunos.get(chaveAluno) + " Email: " + chaveAluno);
                 }
 
-            }
-            else if (opcao == 3) {
+            } else if (opcao == 3) {
                 System.out.println("Por favor, digite o email a ser deletado: ");
                 String emailDeletado = "";
                 String emailASerDeletado = leitor.nextLine();
-                for (String emailAluno : alunos.keySet()){
-                    if(emailAluno.equals(emailASerDeletado)){
+                for (String emailAluno : alunos.keySet()) {
+                    if (emailAluno.equals(emailASerDeletado)) {
                         System.out.println("Email a ser deletado com sucesso.");
                         emailDeletado = emailASerDeletado;
-
+                    } else {
+                        System.out.println("Email não cadastrado.");
                     }
                 }
                 alunos.remove(emailDeletado);
-            }
-            else if (opcao == 4) {
+            } else if (opcao == 4) {
                 chave = false;
-            }
-            else {
+            } else {
                 System.out.println("Por favor, digite um valor valido.");
             }
         }
